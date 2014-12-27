@@ -1,0 +1,49 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+.icon-block {
+  padding: 0 15px;
+}
+.container{
+    width:80%;
+}
+.btn{
+    padding: 0 1rem;
+}
+.skills .btn{
+    padding: 0 0.5rem;
+    font-size:12px;
+}
+.subtitle{
+    line-height: 40px;
+}
+
+.listing h5{
+    color: gray;
+}
+.listing li:before,.skills li:before{ content:"-"; position:relative; left:-5px;}
+.listing li,.skills li{ text-indent:-5px; }
+.android{
+    color:#4CAF50;
+}
+.listing h5{
+    font-size: 1.3rem;
+}
+.listing{
+    margin-bottom:0 !important;
+    margin-left: 2rem !important;
+}
+
+.date, .title, .position{
+    font-size: 1.3rem;
+    color:#555;
+}
+.position{
+    font-size: 1.1rem;
+    color:gray;
+}
