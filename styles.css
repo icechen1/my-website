@@ -665,3 +665,9 @@ ul.nav a:hover {
         transform: translateX(0);
     }
 }
+
+ .about{
+    background-color: rgb(229, 234, 235);;
+    color:#5c5c5c;
+     padding-bottom:3rem;
+}

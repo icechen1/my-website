@@ -1,0 +1,53 @@
+/* MOBILE SPECIFIC STYLES */
+@media only print {
+    .row .col {
+        float: none;
+        width: 100% !important;
+}
+    html{
+        font-size: 11px !important;
+        line-height: 1 !important;
+    }
+    h3{
+        font-size: 2rem;
+    }
+    h4{
+        font-size: 1.5rem;
+    }
+    h5{
+        font-size: 1.2rem;
+    }
+    .card-panel {
+        padding: 0;
+        margin: 0;
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        border-radius: 0px;
+        background-clip: padding-box;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+    .row .col{
+        padding:0;
+    }
+    .card-panel{
+        margin:0;
+    }
+    .container{width:85%}
+    .me{
+        text-align: center;
+    }
+    .btn{
+        margin-right: 5px;
+    }
+    .linkedin{
+        visibility:hidden;
+        display: none;
+    }
+    .fa-github-square:after{
+        content: " icechen1";
+        font-family: "Roboto", sans-serif;
+        font-size: 12px;
+    }
+}
