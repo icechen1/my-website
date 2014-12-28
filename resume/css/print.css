@@ -1,5 +1,5 @@
 /* MOBILE SPECIFIC STYLES */
-@media only print {
+@media print {
     .row .col {
         float: none;
         width: 100% !important;
@@ -7,6 +7,12 @@
     html{
         font-size: 11px !important;
         line-height: 1 !important;
+    }
+    .contact{
+        margin: 0;
+    }
+    .me h5{
+        margin:0;
     }
     h3{
         font-size: 2rem;
