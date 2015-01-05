@@ -4,9 +4,6 @@
 .container{
     width:80%;
 }
-.btn{
-    padding: 0 1rem;
-}
 .skills .btn{
     padding: 0 0.5rem;
     font-size:12px;
@@ -17,6 +14,12 @@
 
 .listing h5{
     color: gray;
+}
+.card-panel h5{
+    margin-left:1rem;
+}
+.card-panel li{
+    margin-left:1rem;
 }
 .listing li:before,.skills li:before{ content:"-"; position:relative; left:-5px;}
 .listing li,.skills li{ text-indent:-5px; }
@@ -39,10 +42,25 @@
     font-size: 1.1rem;
     color:gray;
 }
-
+.btn{
+    padding: 0 5px;
+    margin: 3px;
+    font-size: 13px !important;
+    min-width: 50px;
+    box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.me{
+    margin-bottom: 0.15rem;
+}
+@media only screen{
+    .print_experience{display:none;}
+    .hobbies_print{
+        display:none;
+    }
+}
 
 /* MOBILE SPECIFIC STYLES */
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 599px) {
     .row .col{
         padding:0;
     }
@@ -50,4 +68,108 @@
         margin:0;
     }
     .container{width:85%}
+    .card-panel {
+        padding: 0;
+        margin: 0;
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        border-radius: 0px;
+        background-clip: padding-box;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+    li{
+        margin-left:2rem;
+    }
+    .btn{
+        margin-right: 5px;
+    }
+}
+/* PRINT SPECIFIC STYLES */
+@media print {
+    .row .col {
+        float: none;
+        width: 100% !important;
+    }
+    html{
+        font-size: 11px !important;
+        line-height: 1.5 !important;
+        float: none !important;
+        overflow: visible !important;
+    }
+    .contact{
+        margin: 0;
+    }
+    .me h5{
+        margin:0;
+    }
+    h3{
+        font-size: 2rem;
+    }
+    h4{
+        font-size: 1.5rem;
+    }
+
+    h5{
+        font-size: 1.5rem;
+    }
+    .card-panel {
+        padding: 0;
+        margin: 0;
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        border-radius: 0px;
+        background-clip: padding-box;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+    .row .col{
+        padding:0;
+    }
+    .card-panel{
+        margin:0;
+    }
+    .container{width:85%}
+    .me{
+        width:100% !important;
+        text-align: center;
+    }
+    .left_align{
+        text-align: left;
+    }
+    .btn{
+        margin-right: 5px;
+        font-size:10px;
+        letter-spacing: 0;
+    }
+    .linkedin{
+        visibility:hidden;
+        display: none;
+    }
+    .fa-github-square:after{
+        content: " icechen1";
+        font-family: "Roboto", sans-serif;
+        font-size: 12px;
+    }
+    .hide{display:none;}
+    .button_experience{display:none;}
+    .summary:after, .hobbies:after, h4:after{
+        display:block;
+        content: "";
+        width:100%;
+        border: 0;
+        border-bottom: 1px dashed #ccc;
+        background: #999;
+    }
+    ul,h5,ol{
+        margin:0.5rem;
+    }
+    .hobbies_web{
+        display:none;
+    }
+    .hobbies_print p{
+        margin-left:1rem;
+    }
 }
