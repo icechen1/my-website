@@ -49,6 +49,18 @@
     min-width: 50px;
     box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
+.btn{
+        border-style: solid;
+        box-shadow: none;
+        border-width: 0px;
+        border-radius: 3px;
+}
+.me .btn{
+        color: #4a87ee !important;
+        background-color:white !important;
+        border-color: #3479ed !important;
+        border-width: 1px;
+}
 .me{
     margin-bottom: 0.15rem;
 }
@@ -88,13 +100,17 @@
 }
 /* PRINT SPECIFIC STYLES */
 @media print {
+    body {
+     overflow-x: visible;
+     overflow-y: visible;
+    }
     .row .col {
         float: none;
         width: 100% !important;
     }
     html{
-        font-size: 11px !important;
-        line-height: 1.5 !important;
+        font-size: 13px !important;
+        line-height: 1.25 !important;
         float: none !important;
         overflow: visible !important;
     }
@@ -139,11 +155,24 @@
     .left_align{
         text-align: left;
     }
-    .btn{
-        margin-right: 5px;
-        font-size:10px;
-        letter-spacing: 0;
+    h3{
+        color: #1a69ed !important;
     }
+    .subtitle h5{
+        color: #4a87ee !important;
+    }
+.me .btn{
+        margin-right: 5px;
+        font-size:11px;
+        letter-spacing: 0;
+        background-color:white !important;
+        border-color: #4a87ee !important;
+        border-style: solid;
+        border-width: 1px;
+        color: #4a87ee !important;
+        box-shadow: none;
+        border-radius: 3px;
+}
     .linkedin{
         visibility:hidden;
         display: none;
