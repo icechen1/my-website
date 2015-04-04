@@ -213,7 +213,7 @@ routerApp.controller('ProjectController', function($scope,$sce) {
         //console.log(timeline_block)
         timeline_block.each(function(){
 
-            if($(this).offset().top > $(window).scrollTop()+$(window).height()*0.75) {
+            if($(this).offset().top > $(window).scrollTop()+$(window).height()*0.65) {
                 $(this).find('.timeline-badge, .timeline-panel').addClass('is-hidden');
                 //console.log('add')
             }else{
@@ -224,7 +224,7 @@ routerApp.controller('ProjectController', function($scope,$sce) {
         //on scrolling, show/animate timeline blocks when enter the viewport
         $(window).on('scroll', function(){
             timeline_block.each(function(){
-                if( $(this).offset().top <= $(window).scrollTop()+$(window).height()*0.75 && $(this).find('.timeline-badge').hasClass('is-hidden') ) {
+                if( $(this).offset().top <= $(window).scrollTop()+$(window).height()*0.65 && $(this).find('.timeline-badge').hasClass('is-hidden') ) {
                     $(this).find('.timeline-badge, .timeline-panel').removeClass('is-hidden').addClass('bounce-in');
                 }
             });
