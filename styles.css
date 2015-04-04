@@ -320,9 +320,9 @@ ul.nav a:focus {
 .about {
     min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
     height: 100vh; /* These two lines are counted as one :-)       */
-    line-height:1.75;
+    line-height:1.5;
     font-size: 16px;
-    padding-top:50px;
+    padding-top:100px;
     display:         flex;
     -webkit-align-items: center;
     align-items: center;
@@ -333,6 +333,14 @@ ul.nav a:focus {
     text-shadow: 0px 0px 3px #000;
 
 }
+@media (max-width: 768px) {
+.about {
+    padding-top:70px;
+    display:block;
+
+}
+}
+
 .about p{
     -webkit-animation: bounce 0.6s;
     -moz-animation: bounce 0.6s;
@@ -343,22 +351,6 @@ ul.nav a:focus {
 .about a {
     color:aquamarine
 }
-.about ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-.about li{
-    height:20vh;
-    margin: 0;
-    padding: 0;
-    width:100%;
-    background: #000000;
-}
-.about li:nth-of-type(1){
-    background: #ffffff;
-}
-
 
 /*ANIMATION*/
 @keyframes fadein {
