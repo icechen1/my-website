@@ -1,0 +1,30 @@
+<section class="container projects">
+    <div class="center-all">
+    <span class="timeline_headline">Project Timeline</span>
+    </div>
+
+    <timeline>
+        <timeline-node class="timeline-block" side="{{direction($index)}}" ng-repeat="project in projects">
+            <timeline-badge class="{{project.type}}"><i class="glyphicon"></i>
+            </timeline-badge>
+
+            <timeline-panel>
+
+                <timeline-heading>
+                    <timeline-title>{{project.name}}</timeline-title>
+                </timeline-heading>
+                <timeline-content>
+
+                    <p ng-bind-html="project.description | unsafe"></p>
+
+                    <small class="text-muted"><i class="glyphicon glyphicon-time"></i> {{project.date}}</small>
+                     <a ng-show="project.url" href="{{project.url.url}}" class="info-btn">{{project.url.name}}</a>
+                 <a ng-show="project.source_url" href="{{project.source_url.url}}" class="info-btn">{{project.source_url.name}}</a>
+                </timeline-content>
+                <p>
+
+                    </p>
+            </timeline-panel>
+        </timeline-node>
+    </timeline>
+</section>
