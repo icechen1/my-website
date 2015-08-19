@@ -26,24 +26,70 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
 });
 
 routerApp.controller('ProjectController', function($scope,$sce) {
-    $scope.projects = [{
+    $scope.projects = [
+      {
+        name: "TechTanks",
+        description: "TechTanks is a programming game where you get to code your own tank and fight others! It's a great way to get started with programming and learn Ruby.",
+        url:{
+            name:"Play",
+            url: "https://techtanks.techretreat.ca/"},
+        source_url: null,
+        type: "web",
+        tech: "Ruby on Rails",
+        date:"August 2015"
+    },
+      {
+        name: "Tech Retreat",
+        description: "I co-founded and helped organize a hackathon and learnathon for 160 high school students in Southern Ontario, Canada.",
+        url:{
+            name:"Webapp",
+            url: "http://techretreat.ca/"},
+        source_url: null,
+        type: "web",
+        date:"August 2015"
+    },
+      {
+        name: "BeerNow",
+        description: "Find the cheapest beer in Ontario",
+        url:{
+            name:"Webapp",
+            url: "http://beernow.ca/"},
+        source_url: null,
+        type: "web",
+        tech: "Ruby on Rails",
+        date:"July 2015"
+    },
+      {
+        name: "GlowStone",
+        description: "Use beacons to navigate a museum. Hack for WearHacks Toronto 2015.",
+        url:{
+            name:"Demo",
+            url: "https://github.com/factorialLabs/Glowstone-Android"},
+        source_url: null,
+        type: "web",
+        tech: "Android, Parse",
+        date:"May 2015"
+    },
+      {
         name: "Roomi",
-        description: "Roomi is a communication hub app for roomates built in 20 hours at UW EngHack W15. It incorporates useful features such as messenging between roomates, spliting bills and fees, shared to-do lists as well as shared events. We envisioned the project to facilitate cohabitation. The project is built using Meteor and AngularJS.<br />Won 2nd place at EngHack W15.",
+        description: "Roomi is a communication hub app for roomates built in 20 hours at UW EngHack W15. Won 2nd place at EngHack W15.",
         url:{
             name:"Webapp",
             url: "https://roomi.meteor.com/"},
         source_url: null,
         type: "web",
+        tech: "Meteor",
         date:"March 2015"
     },
                        {
         name: "CommuniVoice",
-        description: "With CommuniVoice, you can reports any kind of problems around the city effortlessly. Just choose a category, take a picture and you are set. We save the location and time and send the information right away to the city. <br/> Won the Yelp best Community hack prize at HackIllinois 2015.",
+        description: "A community issue reporting tool for Android. Won the Yelp best Community hack prize at HackIllinois 2015.",
         url:{
             name:"Webapp",
             url: "http://communivoice.azurewebsites.net/"},
         source_url: null,
         type: "android",
+        tech: "Android",
         date:"March 2015"
     }, {
         name: "SpeedRun",
@@ -53,6 +99,7 @@ routerApp.controller('ProjectController', function($scope,$sce) {
             url: "http://yuchenhou.com/speedrun/"},
         source_url: null,
         type: "android",
+        tech: "Android",
         date:"January 2015"
     },{
         name: "Solar Watch",
@@ -62,6 +109,7 @@ routerApp.controller('ProjectController', function($scope,$sce) {
             url: "https://play.google.com/store/apps/details?id=com.icechen1.sunwatch"},
         source_url: null,
         type: "android",
+        tech: "Android",
         date:"December 2014"
     },{
         name: "ScribblerBot",
@@ -70,6 +118,7 @@ routerApp.controller('ProjectController', function($scope,$sce) {
             name:"GitHub",
             url: "https://github.com/pahgawk/Twitch-Plays-Scribbler"},
         type: "web",
+        tech: "Python, Node",
         date: "November 2014"
     },{
         name: "WatAreFriends",
@@ -78,14 +127,16 @@ routerApp.controller('ProjectController', function($scope,$sce) {
             name:"Webapp",
             url: "http://watarefriends.herokuapp.com"},
         type: "web",
+        tech: "Angular",
         date: "November 2014"
     },{
-        name: "UWInfosession App",
+        name: "UWInfosession",
         description: "Nodejs API and Android app to find the time and location of job info sessions on campus",
         source_url:{
             name:"GitHub",
             url: "https://github.com/icechen1/uw_infosession"},
         type: "web",
+        tech: "Angular, Ionic",
         date: "October 2014"
     },{
         name: "Unsentletters",
@@ -94,6 +145,7 @@ routerApp.controller('ProjectController', function($scope,$sce) {
             name:"Webapp",
             url: "http://Unsentletters.herokuapp.com/"},
         type: "web",
+        tech: "Python Flask",
         date: "October 2014"
     },{
         name: "CVPress",
@@ -102,6 +154,7 @@ routerApp.controller('ProjectController', function($scope,$sce) {
             name:"Github",
             url: "https://github.com/icechen1/CVPress"},
         type: "web",
+        tech: "Node",
         date: "September 2014"
     },{
         name: "Art For Healing",
@@ -110,16 +163,19 @@ routerApp.controller('ProjectController', function($scope,$sce) {
             name:"Website",
             url: "http://artforhealingfoundation.org/"},
         type: "web",
+        tech: "WordPress",
         date: "June - September 2014"
     },{
         name: "SchedulingDirect",
         description: "Android app development for local startup",
         type: "android",
+        tech: "Android",
         date: "June - September 2014"
     },{
         name: "EarthGuesser",
         description: "EarthGuesser is an educational puzzle game that takes you to a random Google Street View location around the world and challenges you to guess its location on a map.",
         type: "android",
+        tech: "Android",
         date: "June - September 2014",
         url:{
             name:"Play Store",
@@ -128,6 +184,7 @@ routerApp.controller('ProjectController', function($scope,$sce) {
         name: "NightLamp",
         description: "NightLamp turns your phone into an intelligent night light and clock, allowing you to sleep with ease.",
         type: "android",
+        tech: "Android",
         date: "June - September 2014",
         url:{
             name:"Play Store",
@@ -143,6 +200,7 @@ routerApp.controller('ProjectController', function($scope,$sce) {
         name: "Face2Gif",
         description: "Face2Gif is the fastest way to create your own animated gifs right from your phone or tablet!",
         type: "android",
+        tech: "Android",
         date: "2013",
         url:{
             name:"Play Store",
@@ -152,6 +210,7 @@ routerApp.controller('ProjectController', function($scope,$sce) {
         name: "SpeechJammer",
         description: "SpeechJammer inhibits speech on the user, thanks to the Delayed Auditory Feedback effect.",
         type: "android",
+        tech: "Android",
         date: "2013",
         url:{
             name:"Play Store",
@@ -160,6 +219,7 @@ routerApp.controller('ProjectController', function($scope,$sce) {
         name: "TakeABreak",
         description: "TakeABreak lets you quickly find nearby public restrooms and drinking water fountains close to you. Winning project at Canadawide Science Fair 2014.",
         type: "android",
+        tech: "Android",
         date: "2013",
         url:{
             name:"Play Store",
@@ -169,6 +229,7 @@ routerApp.controller('ProjectController', function($scope,$sce) {
         description: "Notable allows you to create notification reminders on the go.",
         type: "android",
         date: "2013",
+        tech: "Android",
         url:{
             name:"Play Store",
             url: "https://play.google.com/store/apps/details?id=com.icechen1.notable"}
@@ -177,6 +238,7 @@ routerApp.controller('ProjectController', function($scope,$sce) {
         description: "SleepyTime is an app designed to help you wake up in-between sleep cycles and allows you to start the day with a clear mind. Android app on Google Play Inspired by sleepyti.me.",
         type: "android",
         date: "2013",
+        tech: "Android",
         url:{
             name:"Play Store",
             url: "https://play.google.com/store/apps/details?id=com.icechen1.sleepytime"}
@@ -185,6 +247,7 @@ routerApp.controller('ProjectController', function($scope,$sce) {
         description: "A link shortener service with quota caps and time limits.",
         type: "web",
         date: "2012",
+        tech: "Python Flask",
         source_url:{
             name:"GitHub",
             url: "https://github.com/icechen1/cappdme"}
@@ -193,6 +256,7 @@ routerApp.controller('ProjectController', function($scope,$sce) {
         name: "Metal Sniffer",
         description: "This app detects nearby electromagnetic fields using the phone's built-in magnetometer/compass.",
         type: "android",
+        tech: "Android",
         date: "2012",
         url:{
             name:"Play Store",

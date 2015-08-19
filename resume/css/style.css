@@ -100,6 +100,10 @@
 }
 /* PRINT SPECIFIC STYLES */
 @media print {
+  @page {
+    size: auto;   /* auto is the initial value */
+    margin: 0.75em;
+  }
     body {
      overflow-x: visible;
      overflow-y: visible;
@@ -107,13 +111,18 @@
     .row .col {
         float: none;
         width: 100% !important;
+        padding:0 !important;
+        margin:0 !important;
     }
     html{
-        font-size: 13px !important;
-        line-height: 1.25 !important;
+        font-size: 10.5px !important;
+        line-height: 1 !important;
         float: none !important;
         overflow: visible !important;
     }
+  li{
+    font-size: 12px;
+  }
     .contact{
         margin: 0;
     }
@@ -125,6 +134,7 @@
     }
     h4{
         font-size: 1.5rem;
+      margin: 0.5em;
     }
 
     h5{
