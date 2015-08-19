@@ -59,6 +59,17 @@ routerApp.controller('ProjectController', function($scope,$sce) {
         tech: "Ruby on Rails",
         date:"July 2015"
     },
+    {
+        name: "Swipler",
+        description: "A Chrome extension to nagivate tabs using your hands by leveraging the doppler effect.",
+        url:{
+            name:"GitHub",
+            url: "https://github.com/icechen1/Swipler"},
+        source_url: null,
+        type: "web",
+        tech: "Javascript",
+        date:"June 2015"
+    },
       {
         name: "GlowStone",
         description: "Use beacons to navigate a museum. Hack for WearHacks Toronto 2015.",
