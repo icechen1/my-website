@@ -225,7 +225,7 @@ routerApp.controller('ProjectController', function($scope,$sce) {
         date: "2013",
         url:{
             name:"Play Store",
-            url: "https://play.google.com/store/apps/details?id=com.icechen1.face2gif"}
+            url: "https://play.google.com/store/apps/details?id=com.icechen1.speechjammer"}
     },{
         name: "TakeABreak",
         description: "TakeABreak lets you quickly find nearby public restrooms and drinking water fountains close to you. Winning project at Canadawide Science Fair 2014.",
