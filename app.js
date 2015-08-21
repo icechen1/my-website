@@ -32,7 +32,7 @@ routerApp.controller('ProjectController', function($scope,$sce) {
         description: "TechTanks is a programming game where you get to code your own tank and fight others! It's a great way to get started with programming and learn Ruby.",
         url:{
             name:"Play",
-            url: "https://techtanks.techretreat.ca/"},
+            url: "http://techtanks.techretreat.ca/"},
         source_url: null,
         type: "web",
         tech: "Ruby on Rails",
