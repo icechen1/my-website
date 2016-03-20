@@ -111,7 +111,7 @@ ul.list li{
     top: 0;
     max-width: 300px;
     margin-top: 0.5em;
-    margin-left: 10%;
+    margin-left: 8%;
 }
 @media (max-width: 1200px) {
     .side-info{

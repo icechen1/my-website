@@ -47,7 +47,7 @@ new Vue({
     
     projects: [{
         name: "Rewind",
-        description: "Rewind allows you to passively record your surroundings. This app continuously runs in the background and records everything your phone hears, allowing you to save recent recording when you hear something you would like to keep. ",
+        description: "Rewind allows you to passively record your surroundings.",
         url:{
             name:"Play",
             url: "https://play.google.com/store/apps/details?id=icechen1.com.blackbox&hl=en"
@@ -75,7 +75,7 @@ new Vue({
         date:"February 2016"
     },{
         name: "TechTanks",
-        description: "TechTanks is a programming game where you get to code your own tank and fight others! It's a great way to get started with programming and learn Ruby.",
+        description: "TechTanks is a programming game. Code your own tank, fight others and learn Ruby.",
         url:{
             name:"Play",
             url: "http://techtanks.techretreat.ca/"
@@ -98,7 +98,7 @@ new Vue({
             url: "https://play.google.com/store/apps/details?id=com.icechen1.notable"}
     },{
         name: "SleepyTime",
-        description: "SleepyTime is an app designed to help you wake up in-between sleep cycles and allows you to start the day with a clear mind. Android app on Google Play Inspired by sleepyti.me.",
+        description: "SleepyTime is an app designed to help you sleep better and allows you to start the day with a clear mind.",
         type: "android",
         date: "2013",
         tech: "Android",
@@ -107,7 +107,7 @@ new Vue({
             url: "https://play.google.com/store/apps/details?id=com.icechen1.sleepytime"}
     }, {
         name: "SpeechJammer",
-        description: "SpeechJammer inhibits speech on the user, thanks to the Delayed Auditory Feedback effect.",
+        description: "SpeechJammer uses the Delayed Auditory Feedback effect to inhibit speech on the user, for fun",
         type: "android",
         tech: "Android",
         date: "2013",
