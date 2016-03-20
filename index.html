@@ -63,12 +63,13 @@
                 <p>{{project.description}}</p>
                 <small v-if="project.tech" class="text-muted tech"><i class="fa fa-cogs"></i> {{project.tech}}</small>
                 <small class="text-muted"><i class="fa fa-calendar-o"></i> {{project.date}}</small>
+                <small v-if="project.source_url" class="text-muted"><a href="{{project.source_url.url}}"<i class="fa fa-github"></i> Source </a></small>
               </div>
             </li>
           </ul>
           
           <h2><span class="emoji">🎮</span> Experiments</h2>
-          <pre>noun. cool ideas i've made to play around with</pre>
+          <p><i>noun.</i> cool concepts I've made</ppre>
           <li class="project" v-for="project in experiments">
                 <!--<p class="{{project.type}} banner "><i class="glyphicon"></i></p>-->
               <div class="project__headline">
@@ -78,6 +79,7 @@
                 <p>{{project.description}}</p>
                 <small v-if="project.tech" class="text-muted tech"><i class="fa fa-cogs"></i> {{project.tech}}</small>
                 <small class="text-muted"><i class="fa fa-calendar-o"></i> {{project.date}}</small>
+                <small v-if="project.source_url" class="text-muted"><a href="{{project.source_url.url}}"<i class="fa fa-github"></i> Source </a></small>
               </div>
           </li>
           

@@ -50,8 +50,12 @@ new Vue({
         description: "Rewind allows you to passively record your surroundings. This app continuously runs in the background and records everything your phone hears, allowing you to save recent recording when you hear something you would like to keep. ",
         url:{
             name:"Play",
-            url: "https://play.google.com/store/apps/details?id=icechen1.com.blackbox&hl=en"},
-        source_url: null,
+            url: "https://play.google.com/store/apps/details?id=icechen1.com.blackbox&hl=en"
+        },
+        source_url:{
+          name:"Source",
+          url: "https://github.com/icechen1/blackbox"
+        },
         type: "android",
         tech: "Android",
         date:"February 2016"
@@ -60,8 +64,12 @@ new Vue({
         description: "l33t hax0r is a multiplayer cooperative hacking simulator game.",
         url:{
             name:"Play",
-            url: "http://playl33t.com/"},
-        source_url: null,
+            url: "http://playl33t.com/"
+          },
+        source_url:{
+          name:"Source",
+          url: "https://github.com/icechen1/l33t"
+        },
         type: "web",
         tech: "Web",
         date:"February 2016"
@@ -70,8 +78,12 @@ new Vue({
         description: "TechTanks is a programming game where you get to code your own tank and fight others! It's a great way to get started with programming and learn Ruby.",
         url:{
             name:"Play",
-            url: "http://techtanks.techretreat.ca/"},
-        source_url: null,
+            url: "http://techtanks.techretreat.ca/"
+        },
+        source_url:{
+          name:"Source",
+          url: "https://github.com/TechRetreat/game"
+        },
         type: "web",
         tech: "Ruby on Rails",
         date:"August 2015"
@@ -119,8 +131,12 @@ new Vue({
         description: "Find the cheapest beer in Ontario",
         url:{
             name:"Webapp",
-            url: "http://beernow.ca/"},
-        source_url: null,
+            url: "http://beernow.ca/"
+        },
+        source_url:{
+          name:"Source",
+          url: "https://github.com/icechen1/beerhunter"
+        },
         type: "web",
         tech: "Ruby on Rails",
         date:"July 2015"
@@ -129,8 +145,12 @@ new Vue({
         description: "Generate ideas like they do at Apple!",
         url:{
             name:"Webapp",
-            url: "/ideagen"},
-        source_url: null,
+            url: "/ideagen"
+        },
+        source_url:{
+          name:"Source",
+          url: "https://github.com/icechen1/ideagen"
+        },
         type: "web",
         tech: "Vue.js",
         date:"February 2016"

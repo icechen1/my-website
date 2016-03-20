@@ -37,6 +37,7 @@ a:visited {
 /* mouse over link */
 a:hover {
     color: #333;
+    text-decoration: underline;
 }
 
 /* selected link */
@@ -72,7 +73,10 @@ ul.list li{
     display: inline-block;
     margin: 0 0 0.25em;
     padding: 0.4em 1em;
-    background: rgba(80, 195, 255, 0.4);
+    border-color: rgba(80, 195, 255, 0.4);
+    border-width: 2px;
+    border-radius: 2px;
+    border-style: solid;
     color: #FFF;
     text-transform: none;
     font-weight: 400;
@@ -80,13 +84,14 @@ ul.list li{
 }
 
 .info-btn:hover{
-    background: rgba(92, 153, 255, 0.6);
+    background: rgba(80, 195, 255, 0.4);
     text-decoration: none;
 }
 
 .android{
     background-color:#40b240 !important;
 }
+
 .web{
     background-color:#84a2fc !important;
 }
@@ -105,11 +110,18 @@ ul.list li{
     left: 0;
     top: 0;
     max-width: 300px;
-    margin: 0.5em;
+    margin-top: 0.5em;
+    margin-left: 10%;
 }
 @media (max-width: 1200px) {
     .side-info{
         display: none !important;
+    }
+}
+
+@media (max-width: 1500px) {
+    .side-info{
+      margin-left: 2%;
     }
 }
 
