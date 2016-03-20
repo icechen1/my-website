@@ -44,7 +44,7 @@
           <li class="project" v-for="project in initiatives">
                 <!--<p class="{{project.type}} banner "><i class="glyphicon"></i></p>-->
               <div class="project__headline">
-                <img v-if="project.icon" class="project__icon" src="/img/{{project.icon}}" alt="{{project.name}}"/>
+                <img v-if="project.icon" class="project__icon" v-bind:src="fullIconPath(project.icon)" alt="{{project.name}}"/>
                 <a class="project__title" href="{{project.url.url||project.source_url.url}}">{{project.name}}</a>
               </div>
               <div class="project__inset">

@@ -18,9 +18,13 @@ new Vue({
         x: window.pageXOffset,
         y: window.pageYOffset
       };
-      console.log(scrollObject);
       that.hasScrolled = scrollObject.y > 400;
     });
+  },
+  methods: {
+    fullIconPath: function(icon) {
+      return '/img/' + icon;
+    }
   },
   data: {
     hasScrolled: false,
