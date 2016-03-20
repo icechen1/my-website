@@ -62,8 +62,8 @@
               <div class="project__inset">
                 <p>{{project.description}}</p>
                 <small v-if="project.tech" class="text-muted tech"><i class="fa fa-cogs"></i> {{project.tech}}</small>
+                <small v-if="project.source_url" class="text-muted tech"><a href="{{project.source_url.url}}"><i class="fa fa-github"></i> Source</a></small>
                 <small class="text-muted"><i class="fa fa-calendar-o"></i> {{project.date}}</small>
-                <small v-if="project.source_url" class="text-muted"><a href="{{project.source_url.url}}"<i class="fa fa-github"></i> Source </a></small>
               </div>
             </li>
           </ul>
@@ -78,8 +78,8 @@
               <div class="project__inset">
                 <p>{{project.description}}</p>
                 <small v-if="project.tech" class="text-muted tech"><i class="fa fa-cogs"></i> {{project.tech}}</small>
+                <small v-if="project.source_url" class="text-muted tech"><a href="{{project.source_url.url}}"><i class="fa fa-github"></i> Source </a></small>
                 <small class="text-muted"><i class="fa fa-calendar-o"></i> {{project.date}}</small>
-                <small v-if="project.source_url" class="text-muted"><a href="{{project.source_url.url}}"<i class="fa fa-github"></i> Source </a></small>
               </div>
           </li>
           
