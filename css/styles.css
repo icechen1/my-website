@@ -1,0 +1,144 @@
+body{
+  margin:40px auto;
+  max-width:650px;
+  line-height:1.6;
+  font-size:18px;
+  color:#444;
+  padding:3em 10px 0px 10px;
+  font-family: 'Open Sans', sans-serif;
+}
+  
+h1,h2,h3{
+  line-height:1.2;
+}
+
+h3 {
+  font-weight: 300;
+}
+
+a {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+a:link {
+    color: #333;
+}
+/* visited link */
+a:visited {
+    color: #333;
+}
+
+/* mouse over link */
+a:hover {
+    color: #333;
+}
+
+/* selected link */
+a:active {
+    color: #333;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.highlight {
+  color: dodgerblue;
+}
+
+.info {
+  margin-bottom: 5em;
+}
+
+/* LISTING STUFF */
+
+ul.list li{
+    display: flex;
+    flex-direction: column;
+}
+
+/*---------------*/
+/***** Projects *****/
+/*---------------*/
+
+.info-btn{
+    display: inline-block;
+    margin: 0 0 0.25em;
+    padding: 0.4em 1em;
+    background: rgba(80, 195, 255, 0.4);
+    color: #FFF;
+    text-transform: none;
+    font-weight: 400;
+    font-size: 0.8em;
+}
+
+.info-btn:hover{
+    background: rgba(92, 153, 255, 0.6);
+    text-decoration: none;
+}
+
+.android{
+    background-color:#40b240 !important;
+}
+.web{
+    background-color:#84a2fc !important;
+}
+
+.text-muted{
+  font-weight: 300;
+}
+
+.emoji {
+  font-weight: normal !important; /* fixes emoji render bug */
+}
+
+.side-info{
+    text-align: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    max-width: 300px;
+    margin: 0.5em;
+}
+@media (max-width: 1200px) {
+    .side-info{
+        display: none !important;
+    }
+}
+
+.project{
+  padding-bottom: 1em;
+}
+
+.project__headline{
+
+}
+
+.project__icon{
+  height: 2em;
+  width: auto;
+  border-radius: 8px;
+  vertical-align: middle;
+  margin-right: 0.5em;
+}
+
+.project__title{
+  font-weight: 700;
+  font-size: 1.2em;
+  font-kerning: auto;
+}
+
+.project__inset{
+  margin-left:1em;
+}
+
+.tech{
+  font-weight: 600;
+  padding-right: 10px;
+}
+
+li {
+    list-style-type: none;
+}
