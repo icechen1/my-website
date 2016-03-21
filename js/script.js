@@ -38,7 +38,7 @@ new Vue({
             url: "http://techretreat.ca/"}
     }, {
         name: "TerribleHack",
-        description: "I co-founded TerribleHack, a comedy hackathon every term at the University centered around making useless hacks. Now in its 3rd iteration.",
+        description: "I co-founded TerribleHack, a comedy hackathon that takes place every term at the University centered around making useless hacks. Now in its 3rd iteration.",
         icon:"th-icon.jpg",
         url:{
             name:"Website",
@@ -107,7 +107,7 @@ new Vue({
             url: "https://play.google.com/store/apps/details?id=com.icechen1.sleepytime"}
     }, {
         name: "SpeechJammer",
-        description: "SpeechJammer uses the Delayed Auditory Feedback effect to inhibit speech on the user, for fun",
+        description: "SpeechJammer uses the Delayed Auditory Feedback effect to inhibit speech on the user, for fun.",
         type: "android",
         tech: "Android",
         date: "2013",
@@ -176,7 +176,7 @@ new Vue({
         date:"March 2015"
     }, {
         name: "SpeedRun",
-        description: "Won 2nd place software hack at UofTHacks for the SpeedRun Android/Pebble fitness game ",
+        description: "Won 2nd place software hack at UofTHacks for the SpeedRun Android/Pebble fitness game.",
         url:{
             name:"Landing Page",
             url: "http://yuchenhou.com/speedrun/"},
