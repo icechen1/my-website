@@ -14,6 +14,7 @@
         <!-- Custom styles for this template -->
         <link href="/css/animate.css" rel="stylesheet">
         <link href="/css/styles.css" rel="stylesheet">
+        <link href="/css/terminal.css" rel="stylesheet">
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -25,111 +26,64 @@
         <script src="http://cdnjs.cloudflare.com/ajax/libs/vue/1.0.18/vue.min.js"></script>
     </head>
     <body>
-        <!-- MAIN CONTENT -->
-        <div id="info" class="info">
-          <h3><span class="highlight">Hello.</span> You've reached</h3>
-          <h1>Yu Chen Hou</h1>
-          <p class="bio-section">
-            I'm studying Software Engineering at the University of Waterloo, class of <a href="http://softi.es/" title="UWSE 2019">2019</a>.
-          </p>
-          <p class="bio-section">
-            I am a creator and experienced with web and Android development, and 
-            passionate about Tech Education, Augmented Reality, Data Visualization, and Digital Rights.
-            I am also a huge shutterbug, rock climbing enthusiast, space nerd and board game geek.
-          </p>
-          <p class="bio-section">
-            Previous intern at <a href="http://textnow.com/" title="TextNow">TextNow</a> and <a href="http://getconfide.com" title="Confide">Confide</a>.<br />
-            I'm currently looking for internship opportunities for the upcoming fall!
-          </p>
-          <a class="info-btn" href="mailto:me@yuchenhou.com"><i class="fa fa-envelope"></i> Email</a>
-          <a class="info-btn" href="http://ca.linkedin.com/pub/yu-chen-hou/38/187/17b/"><i class="fa fa-linkedin"></i> Linkedin</a>
-          <a class="info-btn" href="http://github.com/icechen1"><i class="fa fa-github"></i> Github</a>
-          <a class="info-btn" href="https://twitter.com/icechen1"><i class="fa fa-twitter"></i> @icechen1</a>
-          <br />
-          <a class="info-btn" href="resume.pdf">Resume</a>
-          <a class="info-btn" href="https://play.google.com/store/apps/developer?id=Yu+Chen+Hou">Google Play</a>
-          <a class="info-btn" href="http://500px.com/yuchenhou">500px</a>
-        </div>     
-        <div id="dynamic">   
+        <div id="dynamic"> 
+          <!-- MAIN CONTENT -->
+          <div id="info" class="info">
+            <h3><span class="highlight">Hello.</span> You've reached</h3>
+            <h1>Yu Chen Hou</h1>
+            <p class="bio-section">
+              I'm studying Software Engineering at the University of Waterloo, class of <a href="http://softi.es/" title="UWSE 2019">2019</a>.
+            </p>
+            <p class="bio-section">
+              I am a creator and experienced with web and Android development, and 
+              passionate about Tech Education, Augmented Reality, Data Visualization, and Digital Rights.
+              I am also a huge shutterbug, rock climbing enthusiast, space nerd and board game geek.
+            </p>
+            <p class="bio-section">
+              Previous intern at <a href="http://textnow.com/" title="TextNow">TextNow</a> and <a href="http://getconfide.com" title="Confide">Confide</a>.<br />
+              I'm currently looking for internship opportunities for the upcoming fall!
+            </p>
+            <a class="info-btn" href="mailto:me@yuchenhou.com"><i class="fa fa-envelope"></i> Email</a>
+            <a class="info-btn" href="http://ca.linkedin.com/pub/yu-chen-hou/38/187/17b/"><i class="fa fa-linkedin"></i> Linkedin</a>
+            <a class="info-btn" href="http://github.com/icechen1"><i class="fa fa-github"></i> Github</a>
+            <a class="info-btn" href="https://twitter.com/icechen1"><i class="fa fa-twitter"></i> @icechen1</a>
+            <br />
+            <a class="info-btn" href="resume.pdf">Resume</a>
+            <a class="info-btn" href="https://play.google.com/store/apps/developer?id=Yu+Chen+Hou">Google Play</a>
+            <a class="info-btn" href="http://500px.com/yuchenhou">500px</a>
+            <!-- <a class="info-btn" href="#secret" v-on:click="secret">?</a> -->
+          </div>     
+          <a name="secret"></a>
+          <div id="secret" v-show="showSecret" >
+            <div id="terminal">
+              <p>
+                <span>$> </span>
+                <span contenteditable="true" class="input"></span>
+              </p>    
+            </div>
+          </div>
+          
           <h2><span class="emoji">🏢</span> Work Experience</h2>
           <p>For more details on selected positions, please check out my <a href="resume.pdf">resume</a>.</p>
-          <li class="project">
-              <div class="project__headline">
-                <span class="project__title">Software Developer</span>
-              </div>
-              <div class="project__inset">
-                <small>
-                  <a href="http://getconfide.com">Confide</a>. 
-                  New York City. 
-                  Jan - April 2016.
-                </small>
-              </div>  
-          </li>
-          <li class="project">
-              <div class="project__headline">
-                <span class="project__title">Android Mobile Developer</span>
-              </div>
-              <div class="project__inset">
-                <small>
-                  <a href="http://textnow.com">TextNow</a>. 
-                  Waterloo, Ontario. May - December 2015.
-                </small>
-              </div>
-          </li>
-          <li class="project">
-              <div class="project__headline">
-                <span class="project__title">Mobile Developer</span>
-              </div>
-              <div class="project__inset">
-                <small>
-                  <a href="http://hackthenorth.com">Hack the North</a>. 
-                  Waterloo, Ontario. Jan - September 2015.
-                </small>
-              </div>
-          </li>
+          <ul class="list">
+              <work v-for="work in works" :work="work"></work>
+          </ul>
                     
           <h2><span class="emoji">🚀</span> Initiatives</h2>
-          <li class="project" v-for="project in initiatives">
-                <!--<p class="{{project.type}} banner "><i class="glyphicon"></i></p>-->
-              <div class="project__headline">
-                <img v-if="project.icon" class="project__icon" v-bind:src="fullIconPath(project.icon)" alt="{{project.name}}"/>
-                <a class="project__title" href="{{project.url.url||project.source_url.url}}">{{project.name}}</a>
-              </div>
-              <div class="project__inset">
-                <p>{{project.description}}</p>
-              </div>
-          </li>
+          <ul class="list">
+              <initiative v-for="project in initiatives" :project="project"></initiative>
+          </ul>
           
           <h2><span class="emoji">📦</span> Projects</h2>
           <ul class="list">
-            <li class="project" v-for="project in projects">
-                <!--<p class="{{project.type}} banner "><i class="glyphicon"></i></p>-->
-              <div class="project__headline">
-                <a class="project__title" href="{{project.url.url||project.source_url.url}}">{{project.name}}</a>
-              </div>
-              <div class="project__inset">
-                <p>{{project.description}}</p>
-                <small v-if="project.tech" class="text-muted tech"><i class="fa fa-cogs"></i> {{project.tech}}</small>
-                <small v-if="project.source_url" class="text-muted tech"><a href="{{project.source_url.url}}"><i class="fa fa-github"></i> Source</a></small>
-                <small class="text-muted"><i class="fa fa-calendar-o"></i> {{project.date}}</small>
-              </div>
-            </li>
+              <listing v-for="project in projects" :project="project"></listing>
           </ul>
           
           <h2><span class="emoji">🎮</span> Experiments</h2>
-          <p><i>noun.</i> cool concepts I've made</ppre>
-          <li class="project" v-for="project in experiments">
-                <!--<p class="{{project.type}} banner "><i class="glyphicon"></i></p>-->
-              <div class="project__headline">
-                <a class="project__title" href="{{project.url.url||project.source_url.url}}">{{project.name}}</a>
-              </div>
-              <div class="project__inset">
-                <p>{{project.description}}</p>
-                <small v-if="project.tech" class="text-muted tech"><i class="fa fa-cogs"></i> {{project.tech}}</small>
-                <small v-if="project.source_url" class="text-muted tech"><a href="{{project.source_url.url}}"><i class="fa fa-github"></i> Source </a></small>
-                <small class="text-muted"><i class="fa fa-calendar-o"></i> {{project.date}}</small>
-              </div>
-          </li>
+          <p><i>noun.</i> cool concepts I've made</p>
+          <ul class="list">
+              <listing v-for="project in experiments" :project="project"></listing>
+          </ul>
           
           <!-- Side bio -->
           <div class="side-info animated" transition="slide" v-show="hasScrolled">
@@ -141,6 +95,7 @@
             <a class="info-btn" href="https://twitter.com/icechen1"><i class="fa fa-twitter"></i></a>
           </div>
         </div>
+        <script src="/js/terminal.js"></script>
         <script src="/js/script.js"></script>
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

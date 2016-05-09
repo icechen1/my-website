@@ -1,13 +1,51 @@
-/* $(document).ready(function() {
-//PHOTO SLIDESHOW
-_500px.init({
-    sdk_key: '7c2b5b1e3f4206225e41a2e4b44a5c6f0e305044'
-});
-}); */
 Vue.transition('slide', {
   enterClass: 'slideInDown',
   leaveClass: 'slideOutUp'
 })
+
+Vue.component('listing', {
+  props: ['project'],
+  template: '<li class="project"> \
+              <div class="project__headline"> \
+                <a class="project__title" href="{{project.url.url||project.source_url.url}}">{{project.name}}</a> \
+              </div> \
+              <div class="project__inset"> \
+                <p>{{project.description}}</p> \
+                <small v-if="project.tech" class="text-muted tech"><i class="fa fa-cogs"></i> {{project.tech}}</small> \
+                <small v-if="project.source_url" class="text-muted tech"><a href="{{project.source_url.url}}"><i class="fa fa-github"></i> Source</a></small> \
+                <small class="text-muted"><i class="fa fa-calendar-o"></i> {{project.date}}</small> \
+              </div> \
+            </li>'
+});
+
+Vue.component('initiative', {
+  props: ['project'],
+  template: '<li class="project">\
+              <div class="project__headline">\
+                <img v-if="project.icon" class="project__icon" :src="project.icon" alt="{{project.name}}"/>\
+                <a class="project__title" href="{{project.url.url||project.source_url.url}}">{{project.name}}</a>\
+              </div>\
+              <div class="project__inset">\
+                <p>{{project.description}}</p>\
+              </div>\
+          </li>'
+});
+
+Vue.component('work', {
+  props: ['work'],
+  template: '<li class="project">\
+              <div class="project__headline">\
+                <span class="project__title">{{work.position}}</span>\
+              </div>\
+              <div class="project__inset">\
+                <small>\
+                  <a href="{{work.url}}">{{work.company}}</a>. \
+                  {{work.location}}. \
+                  {{work.date}}.\
+                </small>\
+              </div>\
+          </li>'
+});
 
 new Vue({
   el: '#dynamic',
@@ -24,26 +62,61 @@ new Vue({
   methods: {
     fullIconPath: function(icon) {
       return '/img/' + icon;
+    },
+    secret: function(){
+        this.showSecret = true;
+        Terminal.init(document.getElementById("terminal"), this.commands);
     }
   },
   data: {
     hasScrolled: false,
-        
-    initiatives:[{
-        name: "Tech Retreat",
-        description: "I co-founded and helped organize a hackathon and learnathon for 160 high school students in Southern Ontario, Canada.",
-        icon:"tr-icon.jpg",
-        url:{
-            name:"Website",
-            url: "http://techretreat.ca/"}
-    }, {
-        name: "TerribleHack",
-        description: "I co-founded TerribleHack, a comedy hackathon that takes place every term at the University centered around making useless hacks. Now in its 3rd iteration.",
-        icon:"th-icon.jpg",
-        url:{
-            name:"Website",
-            url: "http://terriblehack.website/"}
-    },],
+    showSecret: false,
+    
+    commands:{
+        help: function() {
+            return '<p>Available commands: freecode</p>'
+        }
+    },
+
+    works:[
+        {
+            position: "Software Developer",
+            company: "Confide",
+            url:"http://getconfide.com",
+            location:"New York City",
+            date:"Jan - April 2016"
+        }, {
+            position: "Android Mobile Developer",
+            company: "TextNow",
+            url:"http://textnow.com",
+            location:"Waterloo, Ontario",
+            date:"May - December 2015"
+        }, {
+            position: "Mobile Developer",
+            company: "Hack The North",
+            url:"http://hackthenorth.com",
+            location:"Waterloo, Ontario",
+            date:"Jan - September 2015"
+        },
+    ],
+    
+    initiatives:[
+        {
+            name: "Tech Retreat",
+            description: "I co-founded and helped organize a hackathon and learnathon for 160 high school students in Southern Ontario, Canada.",
+            icon:"/img/tr-icon.jpg",
+            url:{
+                name:"Website",
+                url: "http://techretreat.ca/"}
+        }, {
+            name: "TerribleHack",
+            description: "I co-founded TerribleHack, a comedy hackathon that takes place every term at the University centered around making useless hacks. Now in its 3rd iteration.",
+            icon:"/img/th-icon.jpg",
+            url:{
+                name:"Website",
+                url: "http://waterloo.terriblehack.com/"}
+        },
+    ],
     
     projects: [{
         name: "Rewind",
