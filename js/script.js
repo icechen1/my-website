@@ -191,7 +191,7 @@ new Vue({
     
     experiments:[{
         name: "The Sound of Giving",
-        description: "Listen to Kiva microloans in real time",
+        description: "Visualization site for listening to Kiva microloans in real time",
         url:{
             name:"Webapp",
             url: "/soundofgiving/"},
@@ -201,7 +201,7 @@ new Vue({
         date:"March 2016"
     }, {
         name: "BeerNow",
-        description: "Find the cheapest beer in Ontario",
+        description: "Ruby webapp to find the cheapest beer in Ontario, as measured by ABV",
         url:{
             name:"Webapp",
             url: "http://beernow.ca/"
@@ -213,6 +213,20 @@ new Vue({
         type: "web",
         tech: "Ruby on Rails",
         date:"July 2015"
+    },{
+        name: "Swipler",
+        description:"Chrome extension that allows you to control tabs by hovering your hands over the laptop. \
+        Uses the doppler effect of audio feedback on hand hovement over the laptop keyboard.",
+        url:{
+            name:"Github",
+            url: "https://github.com/icechen1/Swipler"},
+        source_url:{
+          name:"Source",
+          url: "https://github.com/icechen1/Swipler"
+        }, 
+        type: "web",
+        tech: "Chrome extension",
+        date:"June 2015"
     }, {
         name: "Ideagen",
         description: "Generate ideas like they do at Apple!",
