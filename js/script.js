@@ -81,6 +81,12 @@ new Vue({
     works:[
         {
             position: "Software Developer",
+            company: "Microsoft",
+            url:"https://mcec.microsoft.ca/",
+            location:"Vancouver, BC",
+            date:"Sept 2016 - now"
+        },{
+            position: "Software Developer",
             company: "Confide",
             url:"http://getconfide.com",
             location:"New York City",
