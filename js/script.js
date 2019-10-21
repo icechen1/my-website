@@ -224,7 +224,7 @@ new Vue({
         description:"Chrome extension that allows you to control tabs by hovering your hands over the laptop. \
         Uses the doppler effect of audio feedback on hand hovement over the laptop keyboard.",
         url:{
-            name:"Github",
+            name:"GitHub",
             url: "https://github.com/icechen1/Swipler"},
         source_url:{
           name:"Source",
